@@ -55,7 +55,7 @@ const Login = () => {
                 <AuthCard2                    
                     logo={
                         <Link href="/">
-                            <Image className="h-56 w-72 ml-16" src={logot}/>
+                            <Image className="h-56 w-72" src={logot}/>
                         </Link>
                     }>
                     {/* Session Status */}
@@ -139,7 +139,7 @@ const Login = () => {
 
                                     <Link
                                         href="/register"
-                                        className="inline-flex mx-1 ml-2 items-center px-1 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
+                                        className="inline-flex mx-1 ml-2 items-center px-1 py-2 bg-[#C9C9C9] border border-transparent rounded-md font-semibold text-xs text-[#000000] uppercase tracking-widest hover:bg-blue-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
                                         Registrarme
                                     </Link>
                                 </button>

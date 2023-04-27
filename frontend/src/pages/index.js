@@ -71,7 +71,7 @@ export default function Home() {
                                         
                                         <Link
                                         href="/login.previo"
-                                        className="inline-flex  ml-2 items-center py-2 px-4   bg-green-400 border border-transparent rounded-md font-semibold text-[20px] text-white uppercase tracking-widest hover:bg-blue-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
+                                        className="inline-flex  ml-2 items-center py-2 px-4   bg-[#D9D9D9] border border-transparent rounded-md font-semibold text-[20px] text-[#000000] uppercase tracking-widest hover:bg-blue-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
                                          <img className=" block h-6 mr-2 " src="/assets/images/logo/ucollogo.png"/>Iniciar sesión 
                                     </Link>
                                 </button>
