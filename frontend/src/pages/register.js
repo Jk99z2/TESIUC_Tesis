@@ -1,4 +1,4 @@
-import { AuthCard } from '@/components/AuthCard'
+import {AuthCard2 } from '@/components/AuthCard'
 import Button from '@/components/Button'
 import GuestLayout from '@/components/Layouts/GuestLayout'
 import Input from '@/components/Input'
@@ -7,7 +7,7 @@ import Label from '@/components/Label'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
 import { useState } from 'react'
-import { logouno } from '@/../public/assets/images/logo'
+import { logot } from '@/../public/assets/images/logo'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 
@@ -38,15 +38,15 @@ const Register = () => {
     return (
         <GuestLayout>
             <Navbar/>
-            <AuthCard
+            <AuthCard2
                 logo={
                     <Link href="/">
-                        <Image className="h-56 w-72 mt-12" src={logouno}/>
+                        <Image className="h-56 w-72" src={logot}/>
                     </Link>
                 }>
-                <form onSubmit={submitForm}>
+                <form className='w-[500px]' onSubmit={submitForm}>
                     {/* Name */}
-                    <div>
+                    <div >
                         <Label htmlFor="name"className={'text-base'}>Nombre</Label>
 
                         <Input
@@ -57,6 +57,7 @@ const Register = () => {
                             onChange={event => setName(event.target.value)}
                             required
                             autoFocus
+                            
                         />
 
                         <InputError messages={errors.name} className="mt-2" />
@@ -131,7 +132,7 @@ const Register = () => {
                         <Button className="ml-4">Registrar</Button>
                     </div>
                 </form>
-            </AuthCard>
+            </AuthCard2>
         </GuestLayout>
     )
 }

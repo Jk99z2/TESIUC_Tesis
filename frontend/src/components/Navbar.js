@@ -4,32 +4,18 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <nav className="bg-green-600 h-20 border-b ">
-            {/* Primary Navigation Menu */}
-            <div className="max-w-5/2 mx-20">
-                <div className="flex justify-between h-16">
-                    <div className="flex">
-                        {/* Logo tesiuc*/}
-                        <div className="flex-shrink-0 flex items-center">
-                            <Link href="/">
-                                <ApplicationLogo3/>
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* Logo Ucol */}
-                    <div className="hidden sm:flex sm:items-center">
-                        <div>
-                            <Link
-                                href="https://www.ucol.mx/"
-                                className=" block h-16 mt-3  flex ">
-                                    <ApplicationLogo2/>
-                            </Link>
-                        </div>
-                    </div>
-
-                    
-                </div>
+        <nav className="bg-gray-900 border-gray-900 flex flex-row justify-between pl-4 pr-4">
+            {/* logo tesiuc */}
+            <div className="max-w-screen-xl flex flex-wrap items-center  p-4">
+                <Link href="/">
+                        <ApplicationLogo3 className="flex items-center  " />
+                    </Link>
+            </div>
+            {/* logo ucol*/}
+            <div className=" max-w-screen-xl flex flex-wrap items-center p-4 ">
+                <Link href="/">
+                        <ApplicationLogo2 className="inline-flex items-center p-2" />
+                    </Link>
             </div>
 
            
