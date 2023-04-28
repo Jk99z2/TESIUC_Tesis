@@ -4,6 +4,7 @@ import {logov } from '@/../public/assets/images/logo';
 import React from 'react'
 import Image from 'next/image';
 import { card6, card7, niña } from '@/../public/assets/images/all-img';
+import { ApplicationLogo2, ApplicationLogo3 } from '@/components/ApplicationLogo';
 
 export default function Home() {
     
@@ -37,28 +38,32 @@ export default function Home() {
                     </div>*/}
             <GuestLayout>         
                     
-                        <nav className="bg-white border-gray-900 dark:bg-blue-500">
-                            <div className="h-16 flex flex-wrap items-center justify-between mx-auto p-2">
-                                <a class="flex items-center pl-32">
-                                    <Image className="h-16 w-64" src={logov}/>
-                                </a>
-                                <div className="hidden w-full md:block md:w-auto pr-32" id="navbar-default">
-                                <ul className="text-xl text-base flex flex-col  md:p-0 mt-4 border border-gray-200 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg- dark:bg-gray-200 md:dark:bg-blue-500 dark:border-gray-700">
+                        <nav className="bg-gray-900 border-gray-900 flex flex-row justify-between pl-4 pr-4">
+                            {/* logo tesiuc */}
+                            <div className="max-w-screen-xl flex flex-wrap items-center  p-4">
+                                <Link href="/">
+                                        <ApplicationLogo3 className="flex items-center  " />
+                                    </Link>
+                            </div>
+                            {/* logo ucol*/}
+                            <div className=" max-w-screen-xl flex flex-wrap items-center p-4 ">
+                                <ul className='text-xl text-base flex flex-row md:p-0 mt-4 border border-gray-200 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg- dark:bg-gray-200 md:dark:bg-gray-900 dark:border-gray-700"'>
                                     <li>
-                                    <a href="#inicio" className="block  pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Inicio</a>
+                                        <a href="#inicio" className="block  pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Inicio</a>
                                     </li>
                                     <li>
-                                    <a href="#quees" className="block  pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white md:dark:hover:bg-transparent">¿Que es?</a>
+                                        <a href="#quees" className="block  pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white md:dark:hover:bg-transparent">¿Que es?</a>
                                     </li>
                                     <li>
-                                    <a href="#para" className="block  pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">¿Para que sirve?</a>
+                                        <a href="#para" className="block  pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">¿Para que sirve?</a>
                                     </li>
                                     <li>
-                                    <a href="#" className="block pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactos</a>
+                                        <a href="#" className="block pl-3 pr-4 text-gray-900 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactos</a>
                                     </li>
                                 </ul>
-                                </div>
                             </div>
+
+                        
                         </nav>
                         <section id='inicio' className='flex flex-row items-center justify-center  rounded-3xl'>
                         <div className='flex flex-col items-start w-full lg:h-[280px] leading-6 py-16 pl-[300px]'>
