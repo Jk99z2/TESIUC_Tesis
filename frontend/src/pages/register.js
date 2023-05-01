@@ -41,19 +41,19 @@ const Register = () => {
             <AuthCard2
                 logo={
                     <Link href="/">
-                        <Image className="h-56 w-72" src={logot}/>
+                        <Image className="md:h-56 md:w-72 h-28 w-32" src={logot}/>
                     </Link>
                 }>
-                <form className='w-[500px]' onSubmit={submitForm}>
+                <form  className='flex flex-col items-center md:mx-4  md:text-xl md:w-[500px] w-80 ' onSubmit={submitForm}>
                     {/* Name */}
-                    <div >
-                        <Label htmlFor="name"className={'text-base'}>Nombre</Label>
+                    <div className=''>
+                        <Label htmlFor="name" className={'text-lg md:text-2xl'}>Nombre</Label>
 
                         <Input
                             id="name"
                             type="text"
                             value={name}
-                            className="block mt-1 w-full"
+                            className="w-64 md:w-96 "
                             onChange={event => setName(event.target.value)}
                             required
                             autoFocus
@@ -64,14 +64,14 @@ const Register = () => {
                     </div>
 
                     {/* Email Address */}
-                    <div className="mt-4 text-base">
-                        <Label htmlFor="email"className={'text-base'}>Correo Electronico</Label>
+                    <div className="mt-4">
+                        <Label htmlFor="email" className={'text-lg md:text-2xl'}>Correo Electronico</Label>
 
                         <Input
                             id="email"
                             type="email"
                             value={email}
-                            className="block mt-1 w-full"
+                            className="w-64 md:w-96"
                             onChange={event => setEmail(event.target.value)}
                             required
                         />
@@ -80,14 +80,14 @@ const Register = () => {
                     </div>
 
                     {/* Password */}
-                    <div className="mt-4 text-base">
-                        <Label htmlFor="password"className={'text-base'}>Contraseña</Label>
+                    <div className="mt-4">
+                        <Label htmlFor="password"className={'text-lg md:text-2xl'}>Contraseña</Label>
 
                         <Input
                             id="password"
                             type="password"
                             value={password}
-                            className="block mt-1 w-full"
+                            className="w-64 md:w-96"
                             onChange={event => setPassword(event.target.value)}
                             required
                             autoComplete="new-password"
@@ -100,8 +100,8 @@ const Register = () => {
                     </div>
 
                     {/* Confirm Password */}
-                    <div className="mt-4 text-base">
-                        <Label htmlFor="passwordConfirmation"className={'text-base'}>
+                    <div className="mt-4">
+                        <Label htmlFor="passwordConfirmation"className={'text-lg md:text-2xl'}>
                             Confirmar Contraseña
                         </Label>
 
@@ -109,7 +109,7 @@ const Register = () => {
                             id="passwordConfirmation"
                             type="password"
                             value={passwordConfirmation}
-                            className="block mt-1 w-full"
+                            className="w-64 md:w-96"
                             onChange={event =>
                                 setPasswordConfirmation(event.target.value)
                             }
@@ -125,11 +125,11 @@ const Register = () => {
                     <div className="flex items-center justify-end mt-4">
                         <Link
                             href="/login"
-                            className="underline text-sm text-gray-600 hover:text-gray-900">
+                            className="underline text-sm md:text-lg text-gray-600 hover:text-gray-900">
                             Ya registrado?
                         </Link>
 
-                        <Button className="ml-4">Registrar</Button>
+                        <Button className="ml-12">Registrar</Button>
                     </div>
                 </form>
             </AuthCard2>

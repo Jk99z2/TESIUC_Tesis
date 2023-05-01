@@ -5,11 +5,11 @@ const ApplicationLogo = props => (
     
 )
 const ApplicationLogo2 = props => (
-        <Image className="w-96 h-32" src={logoblancoucol}/>
+        <Image className="w-64 " src={logoblancoucol}/>
     
 )
 const ApplicationLogo3 = props => (
-        <Image className="" src={logov}/>
+        <Image className=" w-72" src={logov}/>
     
 )
 
