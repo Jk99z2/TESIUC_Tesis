@@ -55,17 +55,17 @@ const Login = () => {
                 <AuthCard2                    
                     logo={
                         <Link href="/">
-                            <Image className="h-56 w-72" src={logot}/>
+                            <Image className="md:h-56 md:w-72 h-28 w-32" src={logot}/>
                         </Link>
                     }>
                     {/* Session Status */}
-                    <AuthSessionStatus className="mb-4" status={status} />
-                    <div className="ml-2 mb-5 text-base text-gray-800 text-center font-bold">
+                    <AuthSessionStatus status={status} />
+                    <div className="my-5 mx-4 font-bold text-sm text-center md:text-2xl">
                     Indique su número de trabajador, estudiante o correo electrónico y su clave de acceso.
                     </div>
                     <form onSubmit={submitForm}>
                         {/* Email Address */}
-                        <div>
+                        <div className='flex justify-center'>
                             <Label htmlFor="email"></Label>
 
                             <Input
@@ -73,7 +73,7 @@ const Login = () => {
                                 type="email"
                                 value={email}
                                 placeholder='No. Cuenta o correo electrónico'
-                                className="block mt-1 text-base w-full"
+                                className=" md:ml-4  md:text-lg md:w-[500px] w-80"
                                 onChange={event => setEmail(event.target.value)}
                                 required
                                 autoFocus
@@ -83,7 +83,7 @@ const Login = () => {
                         </div>
 
                         {/* Password */}
-                        <div className="mt-6 mb-6">
+                        <div className="mt-6 mb-6 flex justify-center">
                             <Label htmlFor="password"></Label>
 
                             <Input
@@ -91,7 +91,7 @@ const Login = () => {
                                 type="password"
                                 value={password}
                                 placeholder='Contraseña'
-                                className="block mt-1 text-base w-full"
+                                className="md:ml-4 md:text-lg md:w-[500px] w-80"
                                 onChange={event => setPassword(event.target.value)}
                                 required
                                 autoComplete="current-password"
@@ -102,49 +102,27 @@ const Login = () => {
                                 className="mt-2"
                             />
                         </div>
-                        <div className="ml-3 mt-2 mb-6 text-base text-gray-900 font-bold font-bold">
+                        <div className="ml-4 mr-2 mt-2 mb-6 text-xs md:text-base text-gray-900 font-semibold">
                             Los datos para inicio de sesion son Número de Cuenta y Clave de Correo UCOL, 
                             en caso de no recordar su clave de correo, comunicarse a Servicios Telematicos
                             para la recuperación de la clave. Ext. 32006.
                         </div>
-
-                        {/* Remember Me */}
-                        <div className="block mt-4">
-                            <label
-                                htmlFor="remember_me"
-                                className="inline-flex items-center">
-                                <input
-                                    id="remember_me"
-                                    type="checkbox"
-                                    name="remember"
-                                    className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    onChange={event =>
-                                        setShouldRemember(event.target.checked)
-                                    }
-                                />
-
-                                <span className="ml-2 text-sm text-gray-500">
-                                    Recordarme
-                                </span>
-                            </label>
-                        </div>
-
                         <div className="flex items-center justify-end mt-4">
                             <Link
                                 href="/forgot-password"
-                                className="underline text-sm text-gray-600 hover:text-gray-900">
+                                className="underline text-sm md:text-base ml-4 md:mr-6 text-gray-600 hover:text-gray-900">
                                 Olvide mi contraseña?
                             </Link>
-                            <button>
+                            <button className="mx-3">
 
                                     <Link
                                         href="/register"
-                                        className="inline-flex mx-1 ml-2 items-center px-1 py-2 bg-[#C9C9C9] border border-transparent rounded-md font-semibold text-xs text-[#000000] uppercase tracking-widest hover:bg-blue-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
+                                        className="inline-flex items-center px-1 py-2 bg-[#C9C9C9] border border-transparent rounded-md font-semibold text-xs md:text-lg text-[#000000] uppercase tracking-widest hover:bg-green-500 active:bg-blue-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
                                         Registrarme
                                     </Link>
                                 </button>
 
-                            <Button className="ml-3">Entrar</Button>
+                            <Button className="mx-3">Entrar</Button>
                         </div>
                     </form>
                 
