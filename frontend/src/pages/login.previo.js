@@ -1,50 +1,43 @@
-import { AuthCard2 } from '@/components/AuthCard'
-import Image from 'next/image'
+import { AuthCard } from '@/components/AuthCard'
 import GuestLayout from '@/components/Layouts/GuestLayout'
-import Link from 'next/link'
-import {logot} from '@/../public/assets/images/logo'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
+import { ApplicationLogo } from '@/components/ApplicationLogo'
+import Button from '@/components/Button'
+import { estudia, maestro } from '@/../public/assets/images/icon'
 
 const LoginPrewie = () => {
 
     return (
         <GuestLayout>
             <Navbar/>
-            <AuthCard2
-                logo={
-                    <Link href="/">
-                        <Image className="md:h-56 md:w-72 h-28 w-32" src={logot}/>
-                    </Link>
-                }>
-                {/* */}
-                <div className="my-5 font-bold text-lg text-center md:text-3xl ">
-                Seleccione el proveedor de identidad 
-                </div>
-                <div className=" mx-5 text-center font-semibold md:text-2xl  ">
-                Por favor, seleccione el proveedor de identidad donde desea autenticarse
-                </div>
-
-                    <div className="py-6 md:py-2 md:mt-5  ">
-                        <button>
-                            <Link
-                                href="/login"
-                                className="bg-[#E3E3E3] md:px-6 py-2 px-7 md:text-2xl inline-flex items-center border border-transparent rounded-md font-semibold text-[#00000] uppercase tracking-widest hover:bg-green-500 active:bg-blue-500 focus:outline-none focus:border-gray-600 focus:ring ring-gray-600 transition ease-in-out duration-150 ">
-                                Universitario
-                            </Link>
-                        </button>
-                    </div>
-
+            <AuthCard
+                    logo={<ApplicationLogo/>}>
                     {/* */}
-                    <div className=" md:mt-6">
-                        <button>
-                            <Link
-                                href="/login"
-                                className="bg-[#E3E3E3] md:px-16 py-2 px-14 md:text-2xl inline-flex items-center border border-transparent rounded-md font-semibold text-[#00000] uppercase tracking-widest hover:bg-green-500 active:bg-blue-500 focus:outline-none focus:border-gray-600 focus:ring ring-gray-600 transition ease-in-out duration-150">
-                                Docente
-                            </Link>
-                        </button>
+                    <div className="my-5 font-bold text-lg text-center md:text-3xl ">
+                    Seleccione el proveedor de identidad 
                     </div>
-            </AuthCard2>
+                    <div className=" mx-5 text-center font-semibold md:text-xl  ">
+                    Por favor, seleccione el proveedor de identidad donde desea autenticarse
+                    </div>
+
+                    <div className="py-6 md:py-2 xl:mt-4 flex items-center">
+                        <Button className="bg-gray-900 text-white py-3 mt-2  px-12 text-base shadow-2xl">
+                            <a href="/login" className="flex items-center">
+                            <Image className="w-6 h-6 mr-4" src={estudia} alt='Imagen estudiantes'/>
+                            Universitario
+                            </a>
+                        </Button>
+                    </div>
+
+
+                        {/* */}
+                    <div className=" py-2 xl:mt-2">
+                            <Button className="bg-gray-900 text-white  py-3 mt-2 px-20   text-base shadow-2xl"><a href="/login" className="flex flex-row justify-between ">
+                            <Image className="w-6 h-6 mr-4 " src={maestro} alt='Imagen estudiantes'/>Docente</a></Button>
+                    </div>
+                </AuthCard>
+            
         </GuestLayout>
     )
 }

@@ -1,8 +1,46 @@
-/* Image de fondo para el login */
-.bg-login{
-    background-image: url("../../public/assets/images/all-img/gradu.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media screen and (max-width: 540px) {
+    .navbodyfoo{
+        display: grid;
+        grid-template-rows: 80px 1fr 80px;
+        gap: 20px;
+    }
+    .sidepage{
+        display: grid;
+        grid-template-columns: 50px 1fr;  
+    }
+}
+@media screen and (min-width: 540px) {
+    .navbodyfoo{
+        display: grid;
+        grid-template-rows: 80px 1fr 80px;
+        gap: 20px;
+    }
+    .sidepage{
+        display: grid;
+        grid-template-columns: 150px 1fr;  
+    }
+}
+@media screen and (min-width: 740px) {
+    .navbodyfoo{
+        display: grid;
+        grid-template-rows: 80px 660px 80px;
+        gap: 20px;
+    }
+    .sidepage{
+        display: grid;
+        grid-template-columns: 255px 1fr;  
+    }
+}
+@media screen and (min-width: 1024px) {
+    .navbodyfoo{
+        display: grid;
+        grid-template-rows: 80px 1fr 80px;
+        gap: 20px;
+        
+    }
+    .sidepage{
+        display: grid;
+        grid-template-columns: 255px 1fr;  
+    }
 }
 

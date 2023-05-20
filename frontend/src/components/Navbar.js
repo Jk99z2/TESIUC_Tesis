@@ -4,22 +4,25 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <nav className="bg-gray-900 border-gray-900 flex flex-row justify-between lg:pl-12 lg:pr-12">
-            {/* logo tesiuc */}
-            <div className="max-w-screen-xl flex flex-wrap items-center  p-4">
-                <Link href="/">
-                        <ApplicationLogo3 className="flex items-center  " />
+        <header>
+            <nav className="bg-gray-900 flex justify-between pl-4  py-2 pr-4 lg:pl-12 lg:pr-12">
+                {/* logo tesiuc */}
+                <div className='mt-4 w-56'>
+                    <Link href="/">
+                        <ApplicationLogo3/>
                     </Link>
-            </div>
-            {/* logo ucol*/}
-            <div className=" max-w-screen-xl flex flex-wrap items-center p-4 ">
-                <Link href="https://www.ucol.mx/">
-                        <ApplicationLogo2 className="inline-flex items-center p-2" />
+                </div>
+                {/* logo ucol*/}
+                <div className=" p-1 m-1 ">
+                    <Link href="https://www.ucol.mx/">
+                        <ApplicationLogo2/>
                     </Link>
-            </div>
+                </div>
 
-           
-        </nav>
+            
+            </nav>
+        </header>
+        
     )
 }
 

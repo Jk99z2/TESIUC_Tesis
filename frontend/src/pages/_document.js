@@ -8,17 +8,26 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <Html lang="es">
                 <Head>
                     <link
                         href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"
                         rel="stylesheet"
+                        
                     />
+                    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
                 </Head>
+                <header className="antialiased">
+
+                </header>
                 <body className="antialiased">
+                    
                     <Main />
                     <NextScript />
                 </body>
+                <footer className="antialiased">
+
+                </footer>
             </Html>
         )
     }
