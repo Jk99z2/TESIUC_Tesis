@@ -1,10 +1,12 @@
 import AppLayout from '@/components/Layouts/AppLayout'
+import Cuerpo from '@/components/Layouts/cuerpo'
 import Head from 'next/head'
 
 const Tesis = () => {
     return (
     
-        <AppLayout
+        <AppLayout>
+            <Cuerpo
             header={
                 <h2 className="font-semibold text-3xl text-gray-800 leading-tight">
                     Tesis
@@ -39,6 +41,7 @@ const Tesis = () => {
 
 
             
+        </Cuerpo>
         </AppLayout>
     )
 }

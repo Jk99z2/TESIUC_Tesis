@@ -1,19 +1,16 @@
 import AppLayout from '@/components/Layouts/AppLayout'
+import Cuerpo from '@/components/Layouts/cuerpo'
 import Head from 'next/head'
 
 const Actividades = () => {
     return (
-    
-        <AppLayout
+        <AppLayout>
+            <Cuerpo
             header={
                 <h2 className="font-semibold text-3xl text-gray-800 leading-tight">
                     Actividades
                 </h2>
             }>
-
-            <Head>
-                <title>TESIUC</title>
-            </Head>
             <div className="p-4 sm:ml-64">
                     <div className="p-12 border-4 border-solid rounded-lg dark:border-gray-700">
                         <div className="flex flex-row items-between justify-between h-auto mb-4 rounded bg-transparent border-2  border-solid rounded-lg border-gray-700">
@@ -56,7 +53,9 @@ const Actividades = () => {
 
 
             
+        </Cuerpo>
         </AppLayout>
+        
     )
 }
 

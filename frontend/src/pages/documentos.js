@@ -1,10 +1,12 @@
 import AppLayout from '@/components/Layouts/AppLayout'
+import Cuerpo from '@/components/Layouts/cuerpo'
 import Head from 'next/head'
 
 const Documentos = () => {
     return (
     
-        <AppLayout
+        <AppLayout>
+            <Cuerpo
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
                     Documentos
@@ -27,6 +29,7 @@ const Documentos = () => {
 
 
             
+        </Cuerpo>
         </AppLayout>
     )
 }

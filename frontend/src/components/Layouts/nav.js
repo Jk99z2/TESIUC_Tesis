@@ -16,7 +16,7 @@ const Navindex = () => {
             <div className='xl:flex items-center justify-between bg-gray-900 py-4 xl:px-10 px-7'>
                 <div >
                     <Link href="/">
-                        <ApplicationLogo3/>
+                        <ApplicationLogo3 className={"w-36 md:w-56"}/>
                     </Link>
                 </div>
                 <div onClick={()=>setOpen(!open)} className='text-5xl md:text-7xl text-white absolute right-4 top-3 md:top-4 cursor-pointer xl:hidden '>

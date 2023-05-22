@@ -9,13 +9,13 @@ const Navbar = () => {
                 {/* logo tesiuc */}
                 <div className='mt-4 w-56'>
                     <Link href="/">
-                        <ApplicationLogo3/>
+                        <ApplicationLogo3 className={"w-36 md:w-56"}/>
                     </Link>
                 </div>
                 {/* logo ucol*/}
                 <div className=" p-1 m-1 ">
                     <Link href="https://www.ucol.mx/">
-                        <ApplicationLogo2/>
+                        <ApplicationLogo2 className={"w-36 md:w-56"}/>
                     </Link>
                 </div>
 

@@ -1,19 +1,17 @@
 import AppLayout from '@/components/Layouts/AppLayout'
-import Head from 'next/head'
+import Cuerpo from '@/components/Layouts/cuerpo'
+
 
 const Dashboard = () => {
     return (
     
-        <AppLayout
+        <AppLayout>
+            <Cuerpo
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
                     Dashboard
                 </h2>
             }>
-
-            <Head>
-                <title>TESIUC</title>
-            </Head>
             <div className="py-12">
             <div className="max-w-full mx-auto ml-64 sm:px-6 lg:px-4">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -22,11 +20,8 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-            
+            </div>   
+        </Cuerpo>
         </AppLayout>
     )
 }

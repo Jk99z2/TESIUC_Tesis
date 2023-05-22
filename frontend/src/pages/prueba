@@ -1,0 +1,14 @@
+import React from "react";
+import { SidebarProvider } from "./SidebarContext";
+import Pruebaside from "./Pruebaside";
+
+const Prueba = () => {
+  return (
+    <SidebarProvider>
+      {/* Resto de tu aplicación */}
+      <Pruebaside />
+    </SidebarProvider>
+  );
+};
+
+export default App;

@@ -51,7 +51,7 @@ const Login = () => {
             <GuestLayout>
                 <Navbar/>
                 <AuthCard2                    
-                    logo={<ApplicationLogo/>}>
+                    logo={<ApplicationLogo className={"w-36 md:w-72"}/>}>
                     {/* Session Status */}
                     <AuthSessionStatus status={status} />
                     <div className="my-5 mx-4 font-bold text-sm text-center md:text-2xl">
