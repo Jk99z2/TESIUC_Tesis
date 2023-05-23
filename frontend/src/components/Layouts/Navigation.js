@@ -8,9 +8,9 @@ import ResponsiveNavLink, {
 import { DropdownButton } from '@/components/DropdownLink'
 import { useAuth } from '@/hooks/auth'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { SidebarContext } from '@/pages/sidebarcontext'
-import React, { useContext } from "react";
+
 
 
 const Navigation = ({ user,children }) => {
@@ -18,11 +18,15 @@ const Navigation = ({ user,children }) => {
     const { logout } = useAuth()
     const [open, setOpen] = useState(false)
     const { setActive } = useContext(SidebarContext);
+    const [handclick, setHandclick] = useState(false);
       
     const handleClick = () => {
-        setActive(true); // Cambia el valor "active" a true
+        setHandclick(!handclick);
       };
-
+    
+    useEffect(() => {
+        setActive(handclick)
+    }, [handclick, setActive])
     return (
         
         <div className=" min-h-screen grid grid-rows-[100px,1fr]  lg:grid-rows-[80px,1fr]">
@@ -109,7 +113,9 @@ const Navigation = ({ user,children }) => {
                                 </Dropdown>
                             </div>
                             <div className="-mr-3 flex items-center">
-                            <button onClick={handleClick}>Activar Sidebar</button>
+                            <button onClick={handleClick}>
+                                {handclick ? 'Desactivar Sidebar' : 'Activar Sidebar'}
+                            </button>
                                 </div>              
                         </div>
                     </div>

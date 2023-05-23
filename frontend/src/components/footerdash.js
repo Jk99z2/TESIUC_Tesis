@@ -9,7 +9,7 @@ export default function Footerdash() {
                     <div className="bg-gray-900  ">
                         <div className=' items-center flex justify-center  '>
                             <a>
-                            <Image className="w-40 h-auto pt-6 mb-4" src={logov} alt='Logo tesiuc footer'/>
+                            <Image className="w-40 h-auto pt-6 mb-4" src={logov} alt='Logo tesiuc footerdash'/>
                             </a>
                         </div>
                     <hr className=""/>

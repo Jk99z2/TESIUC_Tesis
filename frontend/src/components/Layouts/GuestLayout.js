@@ -4,7 +4,7 @@ const GuestLayout = ({ children }) => {
   return (
     <>
       <Head>
-        <meta charSet="UTF-8" />
+        
         <title>TESIUC</title>
       </Head>
 

@@ -61,7 +61,7 @@ const Login = () => {
                         {/* Email Address */}
                         <div className='flex justify-center items-center'>
                             
-                            <Label htmlFor="email"><Image className="w-6 ml-3 mr-2" src={usuario} alt='Imagen usuario'/></Label>
+                            <Label htmlFor="email"><Image className="w-6 ml-3 mr-2" src={usuario} alt='Imagen usuario' priority={true}/></Label>
 
                             <Input
                                 id="email"
@@ -79,7 +79,7 @@ const Login = () => {
 
                         {/* Password */}
                         <div className="mt-6 mb-6 flex justify-center items-center">
-                            <Label htmlFor="password"><Image className="w-6 ml-3 mr-2" src={contra} alt='Imagen password'/></Label>
+                            <Label htmlFor="password"><Image className="w-6 ml-3 mr-2" src={contra} alt='Imagen password' priority={true}/></Label>
 
                             <Input
                                 id="password"

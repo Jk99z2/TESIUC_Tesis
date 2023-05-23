@@ -5,16 +5,17 @@ export default function Cuerpo({header,children,color}) {
     return (
         <>
             <div className="grid  grid-rows-[1fr,60px] lg:grid-rows-[1fr,70px]">
-                <div>
+                <div className=''>
             
                     <header className={`${color} `}>
-                        <div className="max-w-7xl  py-2   mx-6">
+                        <div className="  py-2   mx-6">
                             {header}
                         </div>
                     </header>
 
                     {/* Page Content */}
-                    <main className='m-8'>{children}
+                    <main className=''>
+                        {children}
                     
                     </main>            
                 </div>

@@ -10,12 +10,13 @@ class MyDocument extends Document {
         return (
             <Html lang="es">
                 <Head>
+                    <meta charSet="UTF-8" />
                     <link
                         href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"
                         rel="stylesheet"
                         
                     />
-                    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+                    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"></link>
                 </Head>
                 <header className="antialiased">
 

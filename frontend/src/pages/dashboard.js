@@ -12,8 +12,8 @@ const Dashboard = () => {
                     Dashboard
                 </h2>
             }>
-            <div className="py-12">
-            <div className="max-w-full mx-auto ml-64 sm:px-6 lg:px-4">
+            <div className="">
+            <div className=" mx-auto ">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 bg-white border-b text-7xl border-gray-200 flex justify-start">
                             Bienvenidos a TESIUC

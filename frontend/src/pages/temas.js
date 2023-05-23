@@ -12,7 +12,7 @@ const Temas = () => {
                     Bienvenidos a Tesiuc
                 </h2>
             }>
-            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">                       
+            <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">                       
                 <button className="inline-flex items-center px-1 py-2 bg-[#C9C9C9] border border-transparent rounded-md font-semibold text-xs md:text-lg text-[#000000] uppercase tracking-widest hover:bg-green-500 active:bg-blue-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
                     Proponer tema
                 </button>

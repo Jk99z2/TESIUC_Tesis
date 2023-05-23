@@ -8,7 +8,7 @@ import { SidebarProvider } from './../../pages/sidebarcontext'
 
 const AppLayout = ({ children }) => {
     const { user } = useAuth({ middleware: 'auth' })
-
+    
     return (
         <>
             <GuestLayout>

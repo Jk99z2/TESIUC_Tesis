@@ -4,7 +4,7 @@ const AuthCard = ({logo, children }) => (
 
     <div className="bg-[#1A8B9D]  h-[96vh] xl:h-[88vh] xl:flex">
         <div>
-        <Image className=" hidden xl:block xl:w-[1000px] xl:h-[88vh]" src={literatu} alt='Imagen de LoginPREvio'/>
+        <Image className=" hidden xl:block xl:w-[1000px] xl:h-[88vh]" src={literatu} alt='Imagen de LoginPREvio' priority={true}/>
         </div>
         <div className=" xl:flex xl:justify-center xl:my-auto xl:mx-auto  ">
             <div className=" pt-1  flex flex-col items-center">
@@ -32,7 +32,7 @@ const AuthCard2 = ({logo, children }) => (
             </div>
         </div>
         <div className="w-[50%]">
-        <Image className=" hidden pr-14 pb-5 xl:block xl:w-[1000px] xl:h-[88vh]" src={pixel} alt='Imagen de LoginPREvio'/>
+        <Image className=" hidden pr-14 pb-5 xl:block xl:w-[1000px] xl:h-[88vh]" src={pixel} alt='Imagen de LoginPREvio' priority={true}/>
         </div>
         
     </div>       

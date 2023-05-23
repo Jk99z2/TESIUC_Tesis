@@ -12,7 +12,7 @@ const LoginPrewie = () => {
         <GuestLayout>
             <Navbar/>
             <AuthCard
-                    logo={<ApplicationLogo className={"w-40 md:w-72"}/>}>
+                    logo={<ApplicationLogo className={"w-40 md:w-72"} priority={true}/>}>
                     {/* */}
                     <div className="my-5 font-bold text-lg text-center md:text-3xl ">
                     Seleccione el proveedor de identidad 
@@ -24,7 +24,7 @@ const LoginPrewie = () => {
                     <div className="py-6 md:py-2 xl:mt-4 flex items-center">
                         <Button className="bg-gray-900 text-white py-3 mt-2  px-12 text-base shadow-2xl">
                             <a href="/login" className="flex items-center">
-                            <Image className="w-6 h-6 mr-4" src={estudia} alt='Imagen estudiantes'/>
+                            <Image className="w-6 h-6 mr-4" src={estudia} alt='Imagen estudiantes' priority={true}/>
                             Universitario
                             </a>
                         </Button>
@@ -34,7 +34,7 @@ const LoginPrewie = () => {
                         {/* */}
                     <div className=" py-2 xl:mt-2">
                             <Button className="bg-gray-900 text-white  py-3 mt-2 px-20   text-base shadow-2xl"><a href="/login" className="flex flex-row justify-between ">
-                            <Image className="w-6 h-6 mr-4 " src={maestro} alt='Imagen estudiantes'/>Docente</a></Button>
+                            <Image className="w-6 h-6 mr-4 " src={maestro} alt='Imagen estudiantes' priority={true}/>Docente</a></Button>
                     </div>
                 </AuthCard>
             

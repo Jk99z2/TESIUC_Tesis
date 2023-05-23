@@ -16,8 +16,8 @@ const Tesis = () => {
             <Head>
                 <title>TESIUC</title>
             </Head>
-            <div class="p-4 sm:ml-64">
-                    <div class="p-4 border-4 border-solid rounded-lg dark:border-gray-700">
+            <div className="p-4 sm:ml-64">
+                    <div className="p-4 border-4 border-solid rounded-lg dark:border-gray-700">
                         <div className="flex flex-col items-center justify-center h-auto mb-4 rounded bg-transparent border-2  border-solid rounded-lg border-gray-700">
                             <dic className=" m-12">
                                 <p className="text-2xl  text-gray-400 dark:text-gray-500">
