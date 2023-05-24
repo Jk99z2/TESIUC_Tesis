@@ -1,19 +1,18 @@
 import AppLayout from '@/components/Layouts/AppLayout'
+import Cuerpo from '@/components/Layouts/cuerpo'
 import Head from 'next/head'
 
 const Anuncios = () => {
     return (
-    
-        <AppLayout
+        <AppLayout>
+            <Cuerpo
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
                     Anuncios
                 </h2>
             }>
 
-            <Head>
-                <title>TESIUC</title>
-            </Head>
+            
             <div className="p-4 sm:ml-64">
                     <div className="p-12 border-4 border-solid rounded-lg dark:border-gray-700">
                         <div className="flex flex-col items-start justify-start h-auto mb-4 rounded bg-transparent border-2  border-solid rounded-lg border-gray-700">
@@ -42,7 +41,9 @@ const Anuncios = () => {
 
 
             
+        </Cuerpo>
         </AppLayout>
+        
     )
 }
 

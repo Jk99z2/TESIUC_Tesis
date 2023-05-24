@@ -1,12 +1,14 @@
 import AppLayout from '@/components/Layouts/AppLayout'
+import Cuerpo from '@/components/Layouts/cuerpo'
 import Head from 'next/head'
 
 const Tesis = () => {
     return (
     
-        <AppLayout
+        <AppLayout>
+            <Cuerpo
             header={
-                <h2 className="font-semibold text-xl text-gray-800 leading-tight">
+                <h2 className="font-semibold text-3xl text-gray-800 leading-tight">
                     Tesis
                 </h2>
             }>
@@ -14,67 +16,32 @@ const Tesis = () => {
             <Head>
                 <title>TESIUC</title>
             </Head>
-            <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="p-6 bg-white border-b border-gray-200">
-                            Para subir Tesis
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="p-4 sm:ml-64">
-                    <div class="p-4 border-4 border-solid rounded-lg dark:border-gray-700">
-                        <div class="grid grid-cols-3 gap-4 mb-4">
-                            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
-                            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-                            </div>
+            <div className="p-4 sm:ml-64">
+                    <div className="p-4 border-4 border-solid rounded-lg dark:border-gray-700">
+                        <div className="flex flex-col items-center justify-center h-auto mb-4 rounded bg-transparent border-2  border-solid rounded-lg border-gray-700">
+                            <dic className=" m-12">
+                                <p className="text-2xl  text-gray-400 dark:text-gray-500">
+                                    Aplicación Web y móvil para la gestión de tesis de licenciatura (ECRB, ENA)</p>
+                                <p className="text-2xl  text-gray-400 dark:text-gray-500">
+                                    *Una aplicación Web que permita a los actores involucrados en el desarrollo de trabajos de
+                                    tesis, llevar un control y seguimiento de la asignación de temas, asesores, coasesores,
+                                    revisores así como la agenda de presentaciones. También contará con reporte de avance,
+                                    repositorio de documentos y notificación de cambios.</p>
+                                <p className="text-2xl  text-gray-400 dark:text-gray-500">
+                                    Asesor(es): Mtro. Enrique Carlos Rosales Busquets, Dr. Ernesto Navarro Álvarez</p>
+                                <p className="text-2xl  text-gray-400 dark:text-gray-500">
+                                    Revisores: Mtro. Marco Antonio Pérez González, Dr. Fernando Rodríguez Haro, Mtro. Juan
+                                    Pablo Martínez Vargas</p>
+                                
+                                    
+                            </dic>
                         </div>
                     </div>
                 </div>    
 
 
             
+        </Cuerpo>
         </AppLayout>
     )
 }

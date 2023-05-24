@@ -1,31 +1,31 @@
 import Navigation from './Navigation'
 import { useAuth } from '@/hooks/auth'
-import Navigationsidebar from './Navigationsidebar'
+
+import GuestLayout from './GuestLayout'
+import Pruebaside from '@/pages/pruebassidebar'
+import { SidebarProvider } from './../../pages/sidebarcontext'
 
 
-const AppLayout = ({ header, children }) => {
+const AppLayout = ({ children }) => {
     const { user } = useAuth({ middleware: 'auth' })
-
+    
     return (
-        <div className="min-h-screen bg-gray-100">
-            <div className='flex flex-col'>
-                <Navigation user={user} />
-                <Navigationsidebar user={user} />
-            </div>
+        <>
+            <GuestLayout>
+                <SidebarProvider>
+                    <Navigation user={user} >
+                        <Pruebaside>
+                            { children }
+                        </Pruebaside>
+                    </Navigation>
+                </SidebarProvider> 
+            </GuestLayout>     
             
 
-            {/* Page Heading */}
-            <header className="bg-white shadow">
-                <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {header}
-                </div>
-            </header>
-
-            {/* Page Content */}
-            <main>{children}
-            
-            </main>
-        </div>
+        
+        
+        </>
+                
     )
 }
 

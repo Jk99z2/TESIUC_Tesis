@@ -1,17 +1,17 @@
 import Image from 'next/image'
-import { AuthCard, AuthCard2 } from '@/components/AuthCard'
-import AuthSessionStatus from '@/components/AuthSessionStatus'
+import { AuthCard2 } from '@/components/AuthCard'
+import Navbar from '@/components/Navbar'
+import { ApplicationLogo } from '@/components/ApplicationLogo'
+import { usuario, contra } from '@/../public/assets/images/icon'
 import Button from '@/components/Button'
 import GuestLayout from '@/components/Layouts/GuestLayout'
 import Input from '@/components/Input'
 import InputError from '@/components/InputError'
 import Label from '@/components/Label'
-import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { logot, logouno } from '@/../public/assets/images/logo'
-import Navbar from '@/components/Navbar'
+import AuthSessionStatus from '@/components/AuthSessionStatus'
 
 const Login = () => {
     const router = useRouter()
@@ -20,7 +20,6 @@ const Login = () => {
         middleware: 'guest',
         redirectIfAuthenticated: '/dashboard',
     })
-
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [shouldRemember, setShouldRemember] = useState(false)
@@ -49,15 +48,10 @@ const Login = () => {
 
     return (
         <>
-            
             <GuestLayout>
                 <Navbar/>
                 <AuthCard2                    
-                    logo={
-                        <Link href="/">
-                            <Image className="md:h-56 md:w-72 h-28 w-32" src={logot}/>
-                        </Link>
-                    }>
+                    logo={<ApplicationLogo className={"w-36 md:w-72"}/>}>
                     {/* Session Status */}
                     <AuthSessionStatus status={status} />
                     <div className="my-5 mx-4 font-bold text-sm text-center md:text-2xl">
@@ -65,15 +59,16 @@ const Login = () => {
                     </div>
                     <form onSubmit={submitForm}>
                         {/* Email Address */}
-                        <div className='flex justify-center'>
-                            <Label htmlFor="email"></Label>
+                        <div className='flex justify-center items-center'>
+                            
+                            <Label htmlFor="email"><Image className="w-6 ml-3 mr-2" src={usuario} alt='Imagen usuario' priority={true}/></Label>
 
                             <Input
                                 id="email"
                                 type="email"
                                 value={email}
                                 placeholder='No. Cuenta o correo electrónico'
-                                className=" md:ml-4  md:text-lg md:w-[500px] w-80"
+                                className=" md:ml-2  md:text-lg md:w-[500px] w-80 mr-4"
                                 onChange={event => setEmail(event.target.value)}
                                 required
                                 autoFocus
@@ -83,15 +78,15 @@ const Login = () => {
                         </div>
 
                         {/* Password */}
-                        <div className="mt-6 mb-6 flex justify-center">
-                            <Label htmlFor="password"></Label>
+                        <div className="mt-6 mb-6 flex justify-center items-center">
+                            <Label htmlFor="password"><Image className="w-6 ml-3 mr-2" src={contra} alt='Imagen password' priority={true}/></Label>
 
                             <Input
                                 id="password"
                                 type="password"
                                 value={password}
                                 placeholder='Contraseña'
-                                className="md:ml-4 md:text-lg md:w-[500px] w-80"
+                                className="md:ml-2 md:text-lg md:w-[500px] w-80 mr-4"
                                 onChange={event => setPassword(event.target.value)}
                                 required
                                 autoComplete="current-password"
@@ -108,24 +103,9 @@ const Login = () => {
                             para la recuperación de la clave. Ext. 32006.
                         </div>
                         <div className="flex items-center justify-end mt-4">
-                            <Link
-                                href="/forgot-password"
-                                className="underline text-sm md:text-base ml-4 md:mr-6 text-gray-600 hover:text-gray-900">
-                                Olvide mi contraseña?
-                            </Link>
-                            <button className="mx-3">
-
-                                    <Link
-                                        href="/register"
-                                        className="inline-flex items-center px-1 py-2 bg-[#C9C9C9] border border-transparent rounded-md font-semibold text-xs md:text-lg text-[#000000] uppercase tracking-widest hover:bg-green-500 active:bg-blue-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
-                                        Registrarme
-                                    </Link>
-                                </button>
-
-                            <Button className="mx-3">Entrar</Button>
-                        </div>
+                            <Button className="bg-gray-900 text-white  py-3 mt-2 px-20 mr-4   text-base shadow-2xl">Entrar</Button>
+                        </div>      
                     </form>
-                
                 </AuthCard2>
             </GuestLayout>
             
