@@ -12,12 +12,12 @@ const LoginPrewie = () => {
         <GuestLayout>
             <Navbar/>
             <AuthCard
-                    logo={<ApplicationLogo className={"w-40 md:w-72"} priority={true}/>}>
+                    logo={<ApplicationLogo className={"w-40 md:w-48 "} priority={true}/>}>
                     {/* */}
-                    <div className="my-5 font-bold text-lg text-center md:text-3xl ">
+                    <div className="my-5 font-bold text-lg text-center md:text-2xl ">
                     Seleccione el proveedor de identidad 
                     </div>
-                    <div className=" mx-5 text-center font-semibold md:text-xl  ">
+                    <div className=" mx-5 text-center font-semibold md:text-lg  ">
                     Por favor, seleccione el proveedor de identidad donde desea autenticarse
                     </div>
 

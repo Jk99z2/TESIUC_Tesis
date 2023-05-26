@@ -51,10 +51,10 @@ const Login = () => {
             <GuestLayout>
                 <Navbar/>
                 <AuthCard2                    
-                    logo={<ApplicationLogo className={"w-36 md:w-72"}/>}>
+                    logo={<ApplicationLogo className={"w-36 md:w-48"}/>}>
                     {/* Session Status */}
                     <AuthSessionStatus status={status} />
-                    <div className="my-5 mx-4 font-bold text-sm text-center md:text-2xl">
+                    <div className="my-5 mx-4 font-bold text-sm text-center md:text-xl">
                     Indique su número de trabajador, estudiante o correo electrónico y su clave de acceso.
                     </div>
                     <form onSubmit={submitForm}>
@@ -68,7 +68,7 @@ const Login = () => {
                                 type="email"
                                 value={email}
                                 placeholder='No. Cuenta o correo electrónico'
-                                className=" md:ml-2  md:text-lg md:w-[500px] w-80 mr-4"
+                                className=" md:ml-2  md:text-lg md:w-[400px] w-80 mr-4"
                                 onChange={event => setEmail(event.target.value)}
                                 required
                                 autoFocus
@@ -86,7 +86,7 @@ const Login = () => {
                                 type="password"
                                 value={password}
                                 placeholder='Contraseña'
-                                className="md:ml-2 md:text-lg md:w-[500px] w-80 mr-4"
+                                className="md:ml-2 md:text-lg md:w-[400px] w-80 mr-4"
                                 onChange={event => setPassword(event.target.value)}
                                 required
                                 autoComplete="current-password"
