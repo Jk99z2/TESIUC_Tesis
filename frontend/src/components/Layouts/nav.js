@@ -10,7 +10,7 @@ const Navindex = () => {
     ];
     let[open,setOpen]=useState(false);
     return (
-    <header >
+    
         <nav className={` shadow-xl w-full ${open ? 'fixed ':'fixed '}`}>
             <div className='xl:flex items-center justify-between bg-gray-900 py-4 xl:px-10 px-7'>
                 <div >
@@ -34,7 +34,7 @@ const Navindex = () => {
             </div>
             
         </nav>
-    </header>
+
   )
 }
 export default Navindex
