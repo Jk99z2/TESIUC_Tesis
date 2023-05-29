@@ -1,8 +1,17 @@
 import AppLayout from '@/components/Layouts/AppLayout';
 import Cuerpo from '../components/Layouts/cuerpo';
-
+import ModalComponent from './ModalComponent';
+import { useState } from 'react';
 const Temas = () => {
-    
+    const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
     
     return (
         <>
@@ -14,9 +23,10 @@ const Temas = () => {
             }>
             <div className=''>
                 <div className='flex justify-end mr-6 mt-6 2xl:mr-16 2xl:mt-6'>
-                    <button className="items-center px-1 py-2 bg-gray-900 border border-transparent rounded-md font-semibold text-xs md:text-lg text-white uppercase tracking-widest hover:bg-gray-500 active:bg-blue-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
+                    <button onClick={openModal} type="button"  className="items-center px-1 py-2 bg-gray-900 border border-transparent rounded-md font-semibold text-xs md:text-lg text-white uppercase tracking-widest hover:bg-gray-500 active:bg-blue-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-100 disabled:opacity-25 transition ease-in-out duration-150">
                         Proponer tema
                     </button>
+                    {showModal && <ModalComponent closeModal={closeModal} />}
                 </div>
                 
                 <div className="p-6 2xl:py-6 2xl:px-16 ">
