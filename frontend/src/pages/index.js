@@ -13,15 +13,15 @@ export default function Home() {
                     <div>
                     <Navindex/>
                     </div>
-                    <main className='px-6 md:px-20 xl:px-32 '> 
-                        <div id='Inicio' className='pt-20 md:pt-28 xl:mb-48 lg:pt-24'>
+                    <main className='px-6 md:px-8 xl:px-8 '> 
+                        <div id='Inicio' className='pt-20 md:pt-12 xl:mb-12 lg:pt-24'>
                             <section className='xl:flex'>
                                 <div className='text-black md:w-[800px] mb-12 lg:mb-0  lg:w-[800px]   '>
                                     <h1 className='font-bold text-3xl md:text-5xl '>Sistema para la Gestión y Control de Tesis de la Universidad de Colima</h1>
                                     <h2 className='text-xl md:text-4xl mt-1 md:mt-4 xl:mb-4'>Plataforma TESIUC</h2>
-                                    <Button  className="bg-gray-900 text-white text-center mt-2 py-3 md:py-6 md:text-4xl px-16 shadow-2xl" >
-                                        <a href="/login.previo">Iniciar Sesión</a>
-                                    </Button>
+                                    <a href="/login.previo"><Button  className="bg-gray-900 text-white text-center mt-2 py-3  md:text-2xl px-16 shadow-2xl" >
+                                       Iniciar Sesión
+                                    </Button></a>
                                     
                                 </div> 
                             <Image className="w-full max-w-full mt-16 md:h-[920px] lg:h-[750px] xl:h-[540px] xl:w" src={escalera} alt='Imagen de Subiendo Libros' priority={true}/>          

@@ -6,7 +6,7 @@ const AuthCard = ({logo, children }) => (
         <div>
         <Image className=" hidden xl:block  xl:w-[600px] 2xl:w-[900px] lg:min-h-[89vh]" src={literatu} alt='Imagen de LoginPREvio' priority={true}/>
         </div>
-        <div className=" xl:flex xl:justify-center xl:my-10 xl:mx-auto  ">
+        <div className=" xl:flex xl:justify-center xl:my-auto xl:mx-auto  ">
             <div className=" pt-1  flex flex-col items-center">
                 <div className="bg-white flex flex-col items-center m-3 mt-16 xl:m-0  py-4 rounded-3xl overflow-hidden drop-shadow-lg 
                                 max-w-xl lg:py-8 ">
@@ -22,10 +22,10 @@ const AuthCard2 = ({logo, children }) => (
 
     <div className="bg-[#1A8B9D] min-h-[91vh] lg:min-h-[89vh] xl:flex ">
         
-        <div className=" xl:flex xl:justify-center xl:my-3 xl:mx-auto  ">
+        <div className=" xl:flex xl:justify-center xl:my-auto xl:mx-auto  ">
             <div className=" pt-1  flex flex-col items-center">
                 <div className="bg-white flex flex-col items-center m-3 mt-16 xl:m-0  py-10 rounded-3xl overflow-hidden drop-shadow-lg 
-                                max-w-xl lg:py-8 ">
+                                max-w-xl lg:py-4 ">
                     {logo}
                     {children}
                 </div>
