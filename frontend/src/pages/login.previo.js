@@ -22,19 +22,21 @@ const LoginPrewie = () => {
                     </div>
 
                     <div className="py-6 md:py-2 xl:mt-4 flex items-center">
-                        <Button className="bg-gray-900 text-white py-3 mt-2  px-12 text-base shadow-2xl">
-                            <a href="/login" className="flex items-center">
+                    <a href="/login" className="flex items-center">
+                        <Button className="bg-gray-900 text-white flex py-3 mt-2  px-12 text-base shadow-2xl">
+                            
                             <Image className="w-6 h-6 mr-4" src={estudia} alt='Imagen estudiantes' priority={true}/>
                             Universitario
-                            </a>
-                        </Button>
+                            
+                        </Button></a>
                     </div>
 
 
                         {/* */}
                     <div className=" py-2 xl:mt-2">
-                            <Button className="bg-gray-900 text-white  py-3 mt-2 px-20   text-base shadow-2xl"><a href="/login" className="flex flex-row justify-between ">
-                            <Image className="w-6 h-6 mr-4 " src={maestro} alt='Imagen estudiantes' priority={true}/>Docente</a></Button>
+                    <a href="/login" className="flex  ">
+                        <Button className="bg-gray-900 text-white flex py-3 mt-2 px-20   text-base shadow-2xl">
+                            <Image className="w-6 h-6 mr-4 " src={maestro} alt='Imagen estudiantes' priority={true}/>Docente</Button></a>
                     </div>
                 </AuthCard>
             

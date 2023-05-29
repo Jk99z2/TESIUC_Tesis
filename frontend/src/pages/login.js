@@ -51,10 +51,10 @@ const Login = () => {
             <GuestLayout>
                 <Navbar/>
                 <AuthCard2                    
-                    logo={<ApplicationLogo className={"w-36 md:w-48"}/>}>
+                    logo={<ApplicationLogo className={"w-36 md:w-40"}/>}>
                     {/* Session Status */}
                     <AuthSessionStatus status={status} />
-                    <div className="my-5 mx-4 font-bold text-sm text-center md:text-xl">
+                    <div className=" mx-auto font-bold text-sm text-center md:text-xl">
                     Indique su número de trabajador, estudiante o correo electrónico y su clave de acceso.
                     </div>
                     <form onSubmit={submitForm}>
@@ -72,6 +72,7 @@ const Login = () => {
                                 onChange={event => setEmail(event.target.value)}
                                 required
                                 autoFocus
+                                autoComplete="email"
                             />
 
                             <InputError messages={errors.email} className="mt-2" />

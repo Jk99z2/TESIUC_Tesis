@@ -7,16 +7,13 @@ import ResponsiveNavLink, {
 } from '@/components/ResponsiveNavLink'
 import { DropdownButton } from '@/components/DropdownLink'
 import { useAuth } from '@/hooks/auth'
-import { useRouter } from 'next/router'
 import { useContext, useEffect, useState } from 'react'
 import { SidebarContext } from '@/pages/sidebarcontext'
 
 
 
 const Navigation = ({ user,children }) => {
-    const router = useRouter()
     const { logout } = useAuth()
-    const [open, setOpen] = useState(false)
     const { setActive } = useContext(SidebarContext);
     const [handclick, setHandclick] = useState(false);
       
@@ -27,79 +24,79 @@ const Navigation = ({ user,children }) => {
     useEffect(() => {
         setActive(handclick)
     }, [handclick, setActive])
-    return (
-        
+    return ( 
         <div className=" min-h-screen grid grid-rows-[100px,1fr]  lg:grid-rows-[80px,1fr]">
-            <div className="   ">
+            <div>
                 <nav className="bg-gray-900 fixed top-0 z-50 w-full h-[100px] lg:h-[80px]">
                     {/* Primary Navigation Menu */}
-                    <div className="">
-                        <div className="flex justify-between">
-                            <div className="flex"> 
-                                {/* Logo */}
-                                <div className="flex my-4 ">
-                                    <Link href="/dashboard">
-                                        <ApplicationLogo3 className="w-48 "/>
-                                    </Link>
-                                </div>
-                                {/* Navigation Links */}
-                                <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                    <NavLink
-                                        href="/dashboard"
-                                        active={router.pathname === '/dashboard'}>
-                                            Dashboard
-                                    </NavLink>
-                                </div>
-                            </div>
-                            {/* Settings Dropdown */}
-                            <div className="hidden sm:flex sm:items-center sm:ml-6">
-                                <Dropdown
+                    <div className="h-[100px] lg:h-[80px] flex justify-between  ">
+                        <div className="my-auto ml-6 md:hidden">
+                            <button onClick={handleClick} className='text-5xl text-white  cursor-pointer '>                              
+                                <i className={`icon ${handclick ? 'ion-md-close' : 'ion-md-menu'}`}></i>
+                            </button>
+                        </div> 
+                        <div className=" my-auto ml-6 hidden md:flex">
+                            <Link href="/dashboard">
+                                <ApplicationLogo3 className="w-48 xl:w-56 "/>
+                            </Link>
+                        </div> 
+                        <div className=" my-auto mr-3 md:mr-6">
+                            <Dropdown
                                     align="right"
                                     width="48"
                                     trigger={
-                                    <button className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 focus:outline-none transition duration-150 ease-in-out">
-                                        <div>{user?.name}
-                                        </div>
-                                        <div className="ml-1">
+                                <button className="flex items-center text-lg font-medium text-white hover:text-gray-500 focus:outline-none transition duration-150 ease-in-out">
+                                    <div>{user?.name}</div>
+                                    <div className="ml-1">
                                             <svg
-                                                className="fill-current h-4 w-4"
+                                                className="fill-current h-6 w-6"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20">
                                                     <path
                                                         fillRule="evenodd"
                                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                                         clipRule="evenodd"
-                                                        />
-                                            </svg>
-                                        </div>
+                                        />
+                                        </svg>
+                                    </div>
                                         
-                                    </button>
-                                }>
-                                    {/* Authentication */}
-                                    <DropdownButton onClick={logout}>
-                                        Logout
-                                    </DropdownButton>
-                                                
-                                </Dropdown>
-                            </div>
-                            <div className="-mr-3 flex items-center">
-                            <button onClick={handleClick}>
-                                {handclick ? 'Desactivar Sidebar' : 'Activar Sidebar'}
-                            </button>
-                                </div>              
-                        </div>
-                    </div>
-                    
-                    
+                                </button>
+                            }>
+                                {/* Authentication */}
+                                <DropdownButton onClick={logout}>
+                                    Logout
+                                </DropdownButton> 
+                            </Dropdown>
+                        </div> 
+                    </div>  
                 </nav>                             
             </div>  
             {children}    
         </div> 
     )
 }
-
 export default Navigation
-
+/*<div className="flex justify-between">
+                        <div className="flex justify-between">
+                            <div className="flex"> 
+                                <div className=" flex items-center">
+                                    <button onClick={handleClick}>
+                                        {handclick ? 'Desactivar Sidebar' : 'Activar Sidebar'}
+                                    </button>
+                                </div> 
+                                {/* Logo *//*}/*
+                                <div className="flex my-4 ">
+                                    
+                                </div>
+                                {/* Settings Dropdown *//*} /* 
+                                <div className="hidden sm:flex sm:items-center sm:ml-6">
+                                
+                            </div>      
+                            </div>
+                                        
+                        </div>
+                    </div>
+*/
 {/* Hamburger */}
 /*
 <div className="-mr-3 flex items-center sm:hidden  ">
