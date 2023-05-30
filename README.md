@@ -1,6 +1,6 @@
 #TESIUC
 
 Proyecto de Tesis.
-Laravel + NEXT.
+Laravel + Next JS.
 
 En desarrollo.
