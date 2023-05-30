@@ -26,7 +26,7 @@ const ModalComponent = ({ closeModal }) => {
                     <div>
                         <label for="email" className="block mb-2 text-sm font-medium text-gray-900 ">Numero de Alumnos</label>
                         <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="2" required/>
-                    </div> 
+                    </div>
                 </form>
             <div className="flex items-center justify-end  border-t border-solid border-slate-200 rounded-b mt-6">
               <button
@@ -45,5 +45,5 @@ const ModalComponent = ({ closeModal }) => {
 
 export default ModalComponent;
 /*
-            
+
              */
